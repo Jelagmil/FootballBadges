@@ -64,7 +64,9 @@ Una vez llamada la función en la consola nos preguntará por el:
 
 Y así quedaría:
 
-<img src="vignettes/3.png" alt="A la izq XML de Opta, a la derecha convertido a dataframe" width="100%" />
-<p class="caption">
-A la izq XML de Opta, a la derecha convertido a dataframe
-</p>
+<img src="vignettes/3.png" alt="" />
+
+Así serían los gráficos para todos los paises:
+
+<img src="vignettes/4.png" alt="" />
+
