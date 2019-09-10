@@ -5,41 +5,29 @@ Jesús Lagos @Vdot_spain <jelagmil@gmail.com>
 2019-09-10
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-La libreria soccergraphR esta pensada para todos aquellos que trabajen con los datos de OPTA y para que las personas que estén estudiando o quieran conocer los datos puedan analizarlos y hacer visualizaciones y análisis de los mismos. Con esta libreria podrás:
-
--   Parsear los xml de Opta (Hay 6 ficheros de ejemplo: f24, f28,2xpass,stats y srml)
--   Analizar los grafos de pases y gráficas de radar
--   Análizar las zonas de tiro
--   Mapas de calor de pases
--   Análisis de corners
--   Gráficas de radar según las estadísticas de una temporada
--   Analizar las posesiones y los eventos por zona
--   Analizar grafos de pases adelantados
--   Analizar las recuperaciones y los tiros asociados.
+La libreria FootballBadge esta pensada para poder hacer gráficos XY con ggplot de una manera sencilla usando los escudos de los equipos de primera de división de las principales ligas europeas.
 
 Para poder probar las funciones de la libreria se ha instalado en `..\R\R-3.5.1\library\soccergraphR\data` los siguientes ficheros:
 
--   f24. Es el XML de eventos de un partido
--   Pass1 y pass2. Los xml de pases de los 2 equipos del fichero f24
--   f28. Es el XML de posesiones
--   Stats. Es el XML con las estadísticas de toda la temporada de un equipo
--   SRML. Es el XMl con estadísticas de un partido
+-   Teams.Rdata Un fichero donde consultar el listado de paises, equipos y el código que tiene que tener tu dataframe para que pinte los logos
+-   Spain.RData Es un fichero con 3 columnas, donde se tiene un campo con el código de Equipo, una variable X y una variable Y-
+-   De la misma manera están los ficheros France, England, Italy, Germany. 
+-   Una vez instalada la libreria puedes cargar los datos directamente con:
+
+``` r
+#Para que se abra en el navegador:
+data(Spain)
+data(Teams)
+Teams
+#También puedes ver la estructura de la tabla:
+?Spain
+```
 
 Versiones
 =========
-Versión 0.1.2 
+Versión 0.1.0 
 -------------
-- Se ha incluido la función para realizar mapas con xG y el campo de coordenadas.
-
-Versión 0.1.1 
--------------
-- Se corregido la leyenda de OptaMAPcontras 
-- Se ha cambiado OptaMAPcorner por flechas 
-- Se ha añadido la función OptaMAParrowpass para visualizar pases como flechas por jugador 
-- Actualizado las viñetas, ayudas y Readme 
-- Se ha mejorado OptaMAPshoot marcando el pie izquierdo y derecho del tirador 
-- Se ha añadido la función OptaMAPshoot2 que visualiza los disparos desde una vista aérea 
-- Se han ajustado los radar plot por posición
+- Versión Inicial. 
 
 Instalación y Ayuda
 -------------------
@@ -47,7 +35,7 @@ Instalación y Ayuda
 Para instalar el paquete desde Github:
 
 ``` r
-devtools::install_github('jelagmil/soccergraphR', build_opts = c("--no-resave-data", "--no-manual"),build_vignettes = TRUE)
+devtools::install_github('jelagmil/FootballBadges', build_opts = c("--no-resave-data", "--no-manual"))
 library(soccergraphR)
 ```
 
