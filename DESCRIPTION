@@ -1,0 +1,14 @@
+Package: FootballBadges
+Type: Package
+Title: Wizard scatter plot graph using european football badges
+Version: 0.1.0
+Author: Jesus Lagos
+Maintainer: Jesus Lagos Twitter:@VDOT_Spain <jelagmil@gmail.com>
+Description: Crear graficos de manera sencilla con los escudos de las ligas europeas
+License: GLP-2
+Encoding: ISO-8859-2
+LazyData: true
+Imports: ggplot2,ggimage
+RoxygenNote: 6.1.1
+Suggests: knitr,rmarkdown
+VignetteBuilder: knitr
