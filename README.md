@@ -62,6 +62,8 @@ Una vez llamada la función en la consola nos preguntará por el:
 - Etiqueta del Eje X
 - Etiqueta del Eje Y
 
+<img src="vignettes/2.png" width="100%" />
+
 Y así quedaría:
 
 <img src="vignettes/3.png" alt="" />
