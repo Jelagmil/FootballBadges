@@ -45,14 +45,14 @@ df$badge <- paste(system.file(package="FootballBadges"),"/Badges/",liga,df$Teams
 
 p<-ggplot(data = df, aes(x = Xaxis1, y = Yaxis1)) +
   ggtitle(label = Tit ,subtitle = Stit) +
-  geom_image(aes(image = badge), size = 0.07) +
-  geom_segment(data = df,aes(x = median(Yaxis1), y = 0, xend = median(Yaxis1), yend = max(Xaxis1)), linetype="dashed",colour = "gray61",alpha=0.5) +
-  geom_segment(data = df,aes(x = 0, y = median(Xaxis1), xend = max(Yaxis1), yend = median(Xaxis1)), linetype="dashed", colour = "gray61",alpha=0.5) +
+  geom_image(aes(image = badge), size = 0.03) +
+  geom_segment(data = df,aes(x = median(Xaxis1), y = 0, xend = median(Xaxis1), yend = max(Yaxis1)), linetype="dashed",colour = "gray61",alpha=0.5) +
+  geom_segment(data = df,aes(x = 0, y = median(Yaxis1), xend = max(Xaxis1), yend = median(Yaxis1)), linetype="dashed", colour = "gray61",alpha=0.5) +
   xlab(xaxis) +
   ylab(yaxis) +
   annotate(geom="text", x=max(df$Yaxis1)-0.1, y=median(df$Xaxis1)+0.05, label=paste("Median =",format(round(median(df$Xaxis1), 2), nsmall = 2)),
              color="gray",size=3) +
-  annotate(geom="text", x=median(df$Yaxis1)+0.1, y=max(df$Xaxis1), label=paste("Median =",format(round(median(df$Yaxis1), 2), nsmall = 2)),
+  annotate(geom="text", x=max(df$Xaxis1)+0.1, y=median(df$Yaxis1), label=paste("Median =",format(round(median(df$Yaxis1), 2), nsmall = 2)),
            color="gray",size=3) +
   theme(legend.position="none") +
   theme(plot.title = element_text(hjust = 0.5, face="bold.italic", size=14),
@@ -66,3 +66,4 @@ p<-ggplot(data = df, aes(x = Xaxis1, y = Yaxis1)) +
 
 return(p)
 }
+
